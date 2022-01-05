@@ -11,12 +11,14 @@ sudo apt install -y php7.3-mbstring php7.3-xml php7.3-fpm php7.3-zip php7.3-comm
 
 ## My Configurations to one SomeProject
 
-
+### MYSQL
+```
 create database SomeProject;
 CREATE USER 'SomeProject'@'localhost' IDENTIFIED WITH mysql_native_password BY 'some_password';
 GRANT ALL PRIVILEGES ON hds.* TO 'SomeProject'@'localhost';
-
-
+```
+### NGINX
+```
 server {
     listen 80;
     server_name ccoria.productos.bo;
@@ -50,7 +52,9 @@ server {
         deny all;
     }
 }
-
-
+```
+### Folder
+```
 sudo chmod -R 755 /var/www/SomeProject
 sudo chown -R www-data:www-data /var/www/SomeProject
+```
