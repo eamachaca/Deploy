@@ -21,7 +21,7 @@ GRANT ALL PRIVILEGES ON hds.* TO 'SomeProject'@'localhost';
 ```
 server {
     listen 80;
-    server_name ccoria.productos.bo;
+    server_name SomeProject.bolivia.bo;
     root /var/www/SomeProject/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
