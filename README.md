@@ -90,6 +90,18 @@ server {
     }
 }
 ```
+### Angular
+```
+server{
+    listen 80;
+    server_name domain.com
+    root /var/www/folder;
+    index index.html;
+    location / {
+        try_files $uri$args $uri$args/ /index.html;
+    }
+}
+```
 ### Folder
 ```
 sudo chmod -R 755 /var/www/SomeProject
